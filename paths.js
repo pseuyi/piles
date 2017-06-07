@@ -3,10 +3,14 @@ document.addEventListener("DOMContentLoaded", function(){
   const canvas = document.getElementById('canvas');
   const c = canvas.getContext('2d');
 
+  const image = document.getElementById("source")
+
   for (let i=0; i<=4000; i+=100) {
 
     let j = Math.round(Math.random()*1200)
     let k = Math.round(Math.random()*4)
+
+    c.drawImage(image, 33, 101, 124, 44, j, 800+k, 87, 104);
 
     c.beginPath();
     c.moveTo(1000,600);
